@@ -76,6 +76,11 @@ console.log("microsoft object: "+topic.find(topic.cid("Microsoft")).getTitle()+ 
 console.log(topic.find(topic.cid("Microsoft"))._data)
   const zip = new Zipper({ path: '/tmp', workbook: loader.getWorkbook() });
   return zip.save().then(status => status && console.info('saved!'));
+
+
+//topic.validate() (will call dfs internally)
+//dfs(){ for node in topic{ if not nodeIsValidNode(node) ->"Error"} } 
+
 };
 
 main();
