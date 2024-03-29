@@ -1159,6 +1159,17 @@ const marker = {
         'index': 157
       }
     }
+  },
+  "gwMarkers": {
+    "id":"gwMarkers",
+    "markersMap":{
+    "gw_product": {
+      "id": "gw_product",
+      "name": "%gwProduct",
+      "resource": "gw_product.png",
+      "index": 158
+    }
+  }
   }
 };
 

@@ -91,4 +91,11 @@ export class AbstractMarker {
    * @return {Marker}
    */
   other(name: string): Marker { return null; }
+
+    /**
+   * @description The icon of group `gw`
+   * @param {String} name
+   * @return {Marker}
+   */
+    gw(name: string): Marker { return null; }
 }
