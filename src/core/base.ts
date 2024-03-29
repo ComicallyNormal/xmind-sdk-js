@@ -83,6 +83,7 @@ export default class Base {
   }
 
   protected all() {
+    console.log('inside Topic.all()');
     const nodes = this.rootNode.all(() => true);
     const map = {};
     nodes.forEach(node => {

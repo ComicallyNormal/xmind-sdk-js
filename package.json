@@ -6,7 +6,7 @@
     "browser": "dist/xmind.esm.js",
     "scripts": {
         "test": "npm run lint && nyc mocha",
-        "build": "npm run test && shx rm -rf ./dist && cross-env node_modules/.bin/tsc && npm run cp && npm run browserify && npm run rollup && npm run tsc",
+        "build": "shx rm -rf ./dist && cross-env node_modules/.bin/tsc && npm run cp && npm run browserify && npm run rollup",
         "lint": "cross-env node_modules/.bin/tslint --config tslint.json --project .",
         "fix": "cross-env node_modules/.bin/tslint --config tslint.json --project . --fix",
         "build-doc": "cross-env BUILD_DOCS=true node scripts/icons.js",

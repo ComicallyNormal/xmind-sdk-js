@@ -11,7 +11,7 @@ import * as Model from '../common/model';
 import * as Core from 'xmind-model';
 import Base from './base';
 import { TopicData } from 'xmind-model/types/models/topic';
-
+//import { filter } from 'jszip';
 
 /**
  * @description Topic common methods
@@ -235,7 +235,7 @@ export class Topic extends Base implements AbstractTopic {
     return this.parent().parent();
   }
 
-  private parent() {
+  public parent() {
     return this.parentId === this.root.getId() ?
       this.root :
       this.sheet.findComponentById(this.parentId);
@@ -256,9 +256,36 @@ public processAndAttachImportData(){
   this.dfsIterative(this.sheet,node=>this.attachNode(node));
 }
 
+//effectively static
+public getChildren(id:string){
+  //list of components that have parents of this id. 
+  const allNodes = this.treeAsList();
+  const filteredNodes = allNodes.filter((node)=>node.parent().getId() == id); //all nodes that are children of id node.
+
+  return filteredNodes;
+}
+
+public treeAsList(){
+
+  //list of components that have parents of this id. 
+  const masterMap = this.all();
+
+  let masterList = [];
+  for(let key in masterMap){
+    masterList.push(key);
+  }
+  let nList:Array<Topic> = [];
+  //console.log(masterList);
+  masterList.forEach(key=>{nList.push(this.find(key))});
+
+  //console.log(nList);
+
+  return nList;
+}
+
   //this does an iterative depth first search on the json data and attaches every child to a parent from the perspective of the sheet's tree data structure.
 private dfsIterative(rootSheet:Core.Sheet, action) {
-  const attachedToRoot:TopicData = rootSheet.getRootTopic().getChildren();
+  const attachedToRoot:TopicData = rootSheet.getRootTopic().getChildren(rootSheet.getRootTopic().getId());
   let stack:TopicData[] = [attachedToRoot];
   while (stack.length) {
       let node:TopicData = stack.pop();

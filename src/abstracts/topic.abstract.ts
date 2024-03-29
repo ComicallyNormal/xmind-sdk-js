@@ -90,6 +90,12 @@ export interface AbstractTopic {
    */
   marker(options: MarkerOptions): Topic;
 
+
+  /**
+   * @description Just a temp function nothing to see here.
+   */
+  treeAsList():Array<Topic>;
+
   /**
    * @description Get the topicId that you have added.
    * * In default, It's going to return the last topicId
