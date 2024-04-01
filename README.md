@@ -30,7 +30,7 @@ Last but not least, we also provided the [Online 🌐 Mind-Mapping](https://xmin
 ```
 $ npm install
 $ tsc
-$ node example/exaple.gw.js
+$ node example/example.gw.js
 ```
 ### Node.js
 
