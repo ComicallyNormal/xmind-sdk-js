@@ -30,6 +30,7 @@ Last but not least, we also provided the [Online 🌐 Mind-Mapping](https://xmin
 > 
 > tsc will convert all the typescript file to js file
 > 
+> Will need to create c:\tmp dir as this code dumps the xmind file in that dir.
 > to run the specific file you can run node example.gw.js
 ```
 npm install
