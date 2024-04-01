@@ -1160,16 +1160,23 @@ const marker = {
       }
     }
   },
-  "gwMarkers": {
-    "id":"gwMarkers",
-    "markersMap":{
-    "gw_product": {
-      "id": "gw_product",
-      "name": "%gwProduct",
-      "resource": "gw_product.png",
-      "index": 158
+  'guidewireMarkers': {
+    'id': 'guidewireMarkers',
+    'hidden': 'true',
+    'markersMap': {
+      'Guidewire-gw_product': {
+        'id': 'Guidewire-gw_product',
+        'name': 'Product',
+        'resource': 'xap:resources/153c2469200668476a0ef9bd4bc9f7eb0b46ec53ae373b419d4f4817b5127842.png',
+        'index': 158
+      },
+      'Guidewire-gw_coverage': {
+        'id': 'Guidewire-gw_coverage',
+        'name': 'Coverage',
+        'resource': 'xap:resources/75e12ef5f716c794054a070796e2c747ee5dd94ec301350cef607f27145a5750.png',
+        'index': 159
+      }
     }
-  }
   }
 };
 

@@ -92,10 +92,11 @@ export class AbstractMarker {
    */
   other(name: string): Marker { return null; }
 
-    /**
-   * @description The icon of group `gw`
+  /**
+   * @description The icon of group `other`
    * @param {String} name
    * @return {Marker}
    */
-    gw(name: string): Marker { return null; }
+  guidewire(name: string): Marker { return null; }
+
 }

@@ -74,9 +74,10 @@ const main = async () => {
 //  topic.on(topic.cid("npm")).add({title:"run"});
 console.log("microsoft object: "+topic.find(topic.cid("Microsoft")).getTitle()+ " "+ topic.find(topic.cid("Microsoft")).getMarkers());
 console.log(topic.find(topic.cid("Microsoft"))._data)
-  const zip = new Zipper({ path: '/tmp', workbook: loader.getWorkbook() });
+  const wb = loader.getWorkbook()
+  const zip = new Zipper({ path: '/tmp', workbook: wb });
+  console.log(JSON.stringify(wb))
   return zip.save().then(status => status && console.info('saved!'));
-
 
 //topic.validate() (will call dfs internally)
 //dfs(){ for node in topic{ if not nodeIsValidNode(node) ->"Error"} } 

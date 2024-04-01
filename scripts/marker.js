@@ -1163,6 +1163,24 @@ const marker = {
         "index": 157
       }
     }
+  },
+  'guidewireMarkers': {
+    'id': 'guidewireMarkers',
+    'hidden': 'false',
+    'markersMap': {
+      'guidewire-product': {
+        'id': 'guidewire-product',
+        'name': '%guidewireProduct',
+        'resource': 'guidewire_product.png',
+        'index': 158
+      },
+      'guidewire-condition': {
+        'id': 'guidewire-condition',
+        'name': '%guidewireCondition',
+        'resource': 'guidewire_condition.png',
+        'index': 159
+      }
+    }
   }
 };
 
