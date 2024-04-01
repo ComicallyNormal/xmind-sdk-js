@@ -25,6 +25,13 @@ Last but not least, we also provided the [Online 🌐 Mind-Mapping](https://xmin
 
 ## Usage and Getting Started
 
+### run example.gw.js
+
+```
+$ npm install
+$ tsc
+$ node example/exaple.gw.js
+```
 ### Node.js
 
 ```shell
