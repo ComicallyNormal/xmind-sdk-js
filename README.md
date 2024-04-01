@@ -26,11 +26,13 @@ Last but not least, we also provided the [Online 🌐 Mind-Mapping](https://xmin
 ## Usage and Getting Started
 
 ### run example.gw.js
-
+> You will need to insall all the npm dependency
+> tsc will convert all the typescript file to js file
+> to run the specific file you can run node example.gw.js
 ```
-$ npm install
-$ tsc
-$ node example/example.gw.js
+npm install
+tsc
+node example/example.gw.js
 ```
 ### Node.js
 
